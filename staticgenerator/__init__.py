@@ -153,6 +153,7 @@ class StaticGenerator(object):
         """
 
         request = self.http_request()
+        request.method = 'GET'
         request.path_info = path
         request.META.setdefault('SERVER_PORT', 80)
         request.META.setdefault('SERVER_NAME', self.server_name)
